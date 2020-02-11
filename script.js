@@ -67,23 +67,7 @@ questions.push(sixthQuestion = {
 // questions.push(secondQuestion={question : "wtf right now", answers: ["0", "1", "2", "3"]} );
 var questionsRotation = shuffle(questions);
 
-
-
-//probably maybe till further notice (well till I think of something better)
-
-//array of question objects
-
-//question object eg.
-//question : "what is 5"
-//wrong answers : ["it is 4", "it is 6", "it is a cat"]
-//right answer : "it is 5"
-//answered : false
-//whether it has been answered or not
-
-
-//TODO may or may not be a good idea to create an object for every player
-//thats obtains a high score (max 3 players)
-
+//TODO implement this and a way to fill it
 var highScorePlayer = {
 
 };
@@ -137,7 +121,7 @@ function presentQuestion(questionIndex){
     //random number for picking a question to present
     // currentQuestion = questionIndex;
     console.log(presentQ);
-    questionDisplay.textContent = questions[presentQ].question;
+    questionDisplay.textContent = questions[presentQ].question + "   " + presentQ;
 
     // presentQuestion(questionsRotation[currentQuestion + 1]);
 
@@ -178,15 +162,23 @@ function checkAnswer(event) {
         displayTime(timePenalty);
         //TODO call displayTime function and subtract time 
     }
+    console.log(questionsAnswered + "bf");
 
     questionsAnswered++;
+    console.log(questionsAnswered + "af");
+    console.log(questions.length + "lenght");
+    let mess;
     if(questionsAnswered === questions.length) {
         console.log("alll answered reseting")
         resetGame();
-    }
-    console.log(questionsRotation[currentQuestion]);
+        mess = "bless this mess";
+    } else {
+    console.log(questionsRotation[currentQuestion] + "what time is it");
+    console.log(currentQuestion + mess);
     // console.log(questionsRotation[currentQuestion + 1]);
+
     presentQuestion(questionsRotation[currentQuestion+=1]);
+    }
 }
 
 function randomNumber(max) {
