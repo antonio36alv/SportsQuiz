@@ -1,5 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body { 
+    width: 100%;
+    text-align: center;
+}
 #answersDiv {
     display: flex;
     flex-direction: column;
     width: 200px;
+}
+
+header { 
+    border: green thick solid;
+    text-align: center;
+}
+
+#questionArea {
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 80%; */
+    border: blue thick solid;
+    text-align: center;
+    /* height: auto; */
+    /* text-align: center; */
+}
+
+#topDisiplay {
+    width: 100%;
+    /* text-align: center; */
+}
+
+#statsDisplay {
+    border: black solid thick;
+    vertical-align: middle;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
 }
