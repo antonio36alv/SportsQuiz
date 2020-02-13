@@ -7,6 +7,7 @@ body {
     width: 100%;
     text-align: center;
 }
+
 #answersDiv {
     display: flex;
     flex-direction: column;
@@ -15,8 +16,25 @@ body {
     margin-right: auto;
 }
 
+#highScoreInput {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 375px;
+}
+
+#displayQuestion {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#announcements {
+    font-size: 75px;
+}
+
 header { 
-    border: green thick solid;
     text-align: center;
 }
 
@@ -24,24 +42,34 @@ header {
     font-size: 25px;
 }
 #questionArea {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     margin-left: auto;
     margin-right: auto;
-    /* width: 80%; */
-    border: blue thick solid;
     text-align: center;
-    /* height: auto; */
-    /* text-align: center; */
 }
 
 #topDisiplay {
     width: 100%;
-    /* text-align: center; */
 }
 
 #statsDisplay {
-    border: black solid thick;
     vertical-align: middle;
     display: flex;
     width: auto;
     justify-content: space-around;
+}
+
+#startButton {
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#seeHighScorers {
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
 }

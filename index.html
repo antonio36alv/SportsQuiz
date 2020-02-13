@@ -17,17 +17,26 @@
             <p id="displayWrong"></p>
         </div>
     </header>
-    <div id="questionArea">
+
+    <p id="announcements">Press Start to begin</p>
+
+    <main id="questionArea">
         <p id="displayQuestion"></p>
         <div id="answersDiv">
 
         </div>
     <button id="startButton">Start!</button>
-
-    </div>
+    </main>
 
     <div>
-        
+        <button id="seeHighScorers">See High Scores!</button>
+            <div id="displayHighScorers">
+                <!-- populated via JS -->
+            </div>
+    </div>
+
+    <div id="highScoreInput">
+        <label>Enter your Name:</label><input type="text" id="enterName"><button id="enterNameBtn" type="submit">Submit Name</button>
     </div>
     <script type="text/javascript" src="script.js"></script>
 </body>
