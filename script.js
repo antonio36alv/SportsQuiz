@@ -138,7 +138,7 @@ startBtn.addEventListener("click", function() {
 });
 
 function startGame() {
-    
+    setAnnouncements("Goodluck!");
     currentQuestion = 0;
     displayTime(maxTime);
     timer = setInterval(function() {
