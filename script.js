@@ -7,8 +7,6 @@ var correctAnswers = 0;
 var wrongAnswers = 0;
 var currentQuestion = 0;
 
-localStorage.clear();
-
 //displays
 var timeLeft = document.getElementById("displayTime");
 var questionDisplay = document.getElementById("displayQuestion");
