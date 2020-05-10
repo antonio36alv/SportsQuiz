@@ -216,16 +216,12 @@ function setHighScorers(userInput) {
     //max of 3 high scorers
     console.log(highScorers + "  " + test);
     highScorers.push(aHighScorer = {
-        name : userInput,
-        highScore : correctAnswers,
-        timeLeft : seconds
+        name: userInput,
+        highScore: correctAnswers,
+        timeLeft: seconds
     });
     console.log(highScorers);
-    // // localStorage.setItem("highScorers", JSON.stringify(highScorers));
-    // if(localStorage.getItem("higScorers").length > 0) {
-    //     // localStorage.
-    //     highScorers.push
-    // }
+    localStorage.setItem("highScorers", JSON.stringify(highScorers));
 }
 
 function presentQuestion(questionIndex){

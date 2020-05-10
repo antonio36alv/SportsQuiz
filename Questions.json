@@ -1,0 +1,58 @@
+[
+    {
+    "question" : "What does UFC stand for?",
+    "answers": ["Ultimate Fighting Championship", "Universal fun cup", "U Fork Carrots", "Unified Flamingo Conference"]
+    },
+
+{ 
+    "question" : "Stacey King once said, \"I'll always remember this as the night that Michael Jordan\n and I combined for 70 points\"." +
+    " How many points did Stacey King score that night?", 
+    "answers": ["1", "42", "17", "25"]
+}
+
+{
+    "question" : "NFL Recieving yards after the age of 40 Jerry Rice : 2509 Brett Farve : __"+ 
+                "Everyone else : 0How yards does Brett Farve have?",
+    "answers" : ["-2 yards", "47 yards", "9 yards", "15 yards"]
+}
+
+{
+    "question" : "What is the most points scored in an NBA Finals Game?",
+    "answers" : ["61 points", "42 points", "55 points", "29 points", "77 points"]
+}
+
+{
+    "question" : "Brazil is the country with the most World Cups, how many do they have?",
+    "answers" : ["5", "3", "2", "7"]
+}
+
+{
+    "question" : "Jamie Moyer is the oldest MLB pitcher to start and win a World Series game. What team did he play for?",
+    "answers" : ["Phillies", "Dodgers", "Yankees", "Cardinals"]
+}
+
+{
+    "question" : "Bo Jackson is the only person in history to scored a touchdown (in the NFL) and hit a homerun (in MLB) all in the same week?",
+    "answers" : ["true", "false"]
+}
+
+{
+    "question" : "What is the record for the fastest knockout in UFC history?",
+    "answers" : ["5 seconds", "26 seconds", "4 seconds", "9 seconds"]
+}
+
+{
+    "question" : "Which professional sports franchise holds the msot championships, across all professional sports?",
+    "answers" : ["Yankees", "Lakers", "Patriots", "NJ Devils", "Detriot Lions"]
+}
+
+{
+    "question" : "The NHL record for the most goals scored by a set of brothers is a combined 2,861 goals. Of these 2,861, how many is Wayne Gretzky responbile for?",
+    "answers" : ["2,857", "1,822", "2,091", "1,944"]
+}
+
+{
+    "question" : "Bill Russell is the record holder for winning the most NBA championships, throughout his player career. How many did he win?",
+    "answers" : ["11 championships", "7 championships", "10 championships", "9 championships"]
+}
+]
