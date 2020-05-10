@@ -55,7 +55,9 @@ if(highScorers.length != 0) {
     setHighScorersBtn.textContent = "Show";
 }
 
-setHighScorersBtn.addEventListener("click", function(){
+setHighScorersBtn.addEventListener("click", setHighScorersDiv)
+
+function setHighScorersDiv() {
     if(setHighScorersBtn.textContent == "Hide") {
         highScorersDisplay.textContent = "";
         setHighScorersBtn.textContent = "See High Scores!";
@@ -73,8 +75,22 @@ setHighScorersBtn.addEventListener("click", function(){
             p.textContent = `Name: ${highScorers[i].name} Score: ${highScorers[i].highScore} Time: ${highScorers[i].timeLeft}`;
             highScorersDisplay.appendChild(p);
         }
+
+        if(highScorers.length > 0) {
+
+            const resetScoresBtn = document.createElement("button")
+            resetScoresBtn.textContent = "Reset High Scorers"
+            resetScoresBtn.addEventListener("click", () => {
+    
+                highScorers.splice(0, highScorers.length)
+                setHighScorersDiv()
+                localStorage.clear()
+            })
+    
+            highScorersDisplay.appendChild(resetScoresBtn)
+        }
     }
-});
+};
 
 //JUST QUESTIONS**************************************************************
 questions.push(question = {
