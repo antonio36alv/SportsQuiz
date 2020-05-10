@@ -23,7 +23,24 @@ var answersDiv = document.getElementById("answersDiv");
 
 //buttons
 var startBtn = document.getElementById("startButton");
+//entername button
 var enterNameBtn = document.getElementById("enterNameBtn");
+enterNameBtn.addEventListener("click", function(){
+    let input = document.getElementById("enterName").value;
+    setHighScorers(input);
+    displayInput(false);
+    setHighScorersBtn.style.display = "block";
+
+    if(setHighScorersBtn.textContent === "Hide") {
+        //append new high scorer
+        
+        let p = document.createElement("p");
+        // p.textContent = JSON.stringify(highScorers[i]);
+        p.textContent = `Name: ${highScorers[highScorers.length - 1].name} Score: ${highScorers[highScorers.length - 1].highScore} Time: ${highScorers[highScorers.length - 1].timeLeft}`;
+
+        highScorersDisplay.appendChild(p);
+    }
+});
 
 var setHighScorersBtn = document.getElementById("seeHighScorers");
 
@@ -33,12 +50,9 @@ var questions = [];
 //https://stackoverflow.com/questions/43762363/how-to-store-an-array-of-objects-in-local-storage
 var highScorers = JSON.parse(localStorage.getItem("highScorers") || "[]");
 
-console.log(highScorers.length);
-
-
 if(highScorers.length != 0) {
     setHighScorersBtn.style.display = "block";
-    setHighScorersBtn.textContent = "Hide";
+    setHighScorersBtn.textContent = "Show";
 }
 
 setHighScorersBtn.addEventListener("click", function(){
@@ -50,10 +64,9 @@ setHighScorersBtn.addEventListener("click", function(){
             highScorersDisplay.removeChild(highScorersDisplay.firstChild);
         }
     } else {
-        console.log(highScorers.length)
+        
         setHighScorersBtn.textContent = "Hide";
         for(i = 0; i < highScorers.length; i++) {
-        console.log(highScorers[i])
 
             let p = document.createElement("p");
             // p.textContent = JSON.stringify(highScorers[i]);
@@ -181,14 +194,6 @@ function displayInput(display) {
     } else {
         document.getElementById("highScoreInput").style.display = "none";
     }
-
-    enterNameBtn.addEventListener("click", function(){
-        let input = document.getElementById("enterName").value;
-        setHighScorers(input);
-        displayInput(false);
-        setHighScorersBtn.style.display = "block";
-        setHighScorersBtn.textContent = "See High Scores!";
-    });
 }
 
 function setAnnouncements(announcement) {
@@ -209,18 +214,18 @@ function setAnnouncements(announcement) {
         }
     }
 }
-var test = 0;
+
 function setHighScorers(userInput) {
-    test++;
+
     //use index to determine which element to splice with our new high scorer
     //max of 3 high scorers
-    console.log(highScorers + "  " + test);
+    let aHighScorer
     highScorers.push(aHighScorer = {
         name: userInput,
         highScore: correctAnswers,
         timeLeft: seconds
     });
-    console.log(highScorers);
+
     localStorage.setItem("highScorers", JSON.stringify(highScorers));
 }
 
@@ -280,8 +285,8 @@ function checkAnswer(event) {
         presentQuestion(questionsRotation[currentQuestion+=1]);
     }
 }
+
 function checkHighScores(name) {
-    console.log(highScorers);
     //if there is no one with a high score we will have any player that finishes,
     //whether it is from answering all the questions or time has expired,
     //become our first high scorer
@@ -320,7 +325,6 @@ function checkHighScores(name) {
             for(i = 0; i < highScorers.length;) {
                 //check to see if our current correctAnswers beats previous highScores or is equal to it
                 console.log(highScorers.length)
-                console.log(highScorers[i].highScore)
                 if(correctAnswers >= highScorers[i].highScore) {
                     //we beat a score, display high score input, end loop
                     displayInput(true);
