@@ -1,8 +1,13 @@
 # Sports Quiz
 
-## [Link to Sports Quiz](https://antonio36alv.github.io/SportsQuiz/)
+![Badge](https://img.shields.io/badge/Javascript-a)
+
+[Sports Quiz - Deployed](https://antonio36alv.github.io/SportsQuiz/)
+
+[My GitHub](https://github.com/antonio36alv)
 
 ![Screenshot](https://antonio36alv.github.io/SportsQuiz/Images/quiz.PNG)
+
 
 ## Project Description
 
@@ -22,4 +27,3 @@ The goal for this project was to create a webpage that serves as a quiz. The use
     1. Same applies to the answers of each question
 
 4. Code was setup so that it could handle any ammount of questions and those questions could have different answer ammounts.
-    
