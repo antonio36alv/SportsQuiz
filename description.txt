@@ -1,0 +1,17 @@
+I want a quizzing platform that allows a user to make a quiz
+
+When making a quiz I want the option for it to be an open quiz or a way to restrict partipipants via a generated code for the quiz and for each participant (particpant code is unique for each participant)
+ 
+I want a Google authentication
+
+I want three types of questions: mulitple choice, multiple choice with images, and open ended
+
+I want to be able to link a youtube video or a picture relevant to the question
+
+I want a timer for the quiz with the option for unlimited time
+
+I want a game mode where I can set the option for reducing time left, based on the quiz makers' desired time penalty
+
+Quiz makers should be able to save quizes that they have not finished creating
+
+If time is unlimited quiz takers may come back to the quiz
